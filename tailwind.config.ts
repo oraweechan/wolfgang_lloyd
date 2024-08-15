@@ -9,16 +9,17 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        black: {
-          DEFAULT: "#000",
-          100: "#000319",
-        },
-        teal: {
-          DEFAULT: "#008080",
-        },
-        pink: {
-          DEFAULT: "#FF1393",
-        },
+        primary: "#2b2e4a", // Dark Blue
+        accent: "#e84545", // Red
+        secondary: "#903749", // Dark Red
+        darkPurple: "#53354a", // Dark Purple
+        lightGray: "#d1d5db", // Light Gray for secondary text on dark background
+        darkGray: "#4a4a4a", // Dark Gray for secondary text on light background
+        dark: "#2b2e4a", // Alias for primary dark background
+      },
+      translate: {
+        "100p": "100%",
+        "-100p": "-100%",
       },
     },
   },

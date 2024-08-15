@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { archivo_narrow } from "./fonts";
+import NavBar from "@/components/NavBar";
+import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Next.js portfolio",
-  description: "Portfolio made with Next.js, Tailwind, Framer Motion",
+  title: "Wolfgang Lloyd",
+  description: "Portfolio",
 };
 
 export default function RootLayout({
@@ -14,7 +16,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={archivo_narrow.className}>{children}</body>
+      <body className={archivo_narrow.className}>
+        <NavBar />
+        {children}
+        <Footer/>
+      </body>
     </html>
   );
 }

@@ -5,3 +5,38 @@
 * {
   box-sizing: border-box;
 }
+
+@layer utilities {
+  .flex-center {
+    @apply flex items-center justify-center;
+  }
+  .container-padding {
+    @apply px-10;
+  }
+  .hero-title {
+    font-size: clamp(2.5rem, 5vw + 1rem, 9rem);
+
+    text-transform: uppercase;
+
+  }
+  .hero-subtitle {
+    text-transform: uppercase;
+    font-size: max(16px, 1.15vw);
+  }
+
+  .nav-height {
+    @apply h-[calc(100vh-60px)];
+  }
+
+  .custom-font-size {
+    font-size: max(8.68vw, 34px);
+  }
+
+  .box {
+    --mask:
+      radial-gradient(223.61px at 50% 300px,#000 99%,#0000 101%) calc(50% - 200px) 0/400px 100%,
+      radial-gradient(223.61px at 50% -200px,#0000 99%,#000 101%) 50% 100px/400px 100% repeat-x;
+    -webkit-mask: var(--mask);
+            mask: var(--mask);
+  }
+}
