@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <footer className=" container-padding py-10 bg-slate-300 flex justify-between items-center">
+    <footer className=" container-padding py-10 bg-accentTeal flex justify-between items-center">
       <h2 className="text-4xl md:text-9xl">
         Start a project
       </h2>

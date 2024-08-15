@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function About() {
   return (
-    <main className="min-h-screen bg-gray-50 flex flex-col items-center">
+    <main className="min-h-screen bg-beige flex flex-col items-center">
       <div className="w-full max-w-7xl p-6">
         <h2 className="text-3xl font-bold text-left py-6">About Wolfgang Lloyd</h2>
       </div>

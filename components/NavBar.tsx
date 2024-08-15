@@ -2,26 +2,28 @@ import Link from "next/link";
 
 const NavBar = () => {
   return (
-    <header className="fixed top-0 left-0 w-full bg-white z-50">
-      <div className="flex flex-row justify-between container-padding py-5">
-        <p>WL</p>
-        <ul className="flex gap-4">
+    <header className="sticky top-0 left-0 w-full bg-white z-50 border-b-4 border-black">
+      <nav className="container mx-auto flex justify-between items-center px-6 py-5 ">
+        <div className="text-lg font-bold">
+          <Link href="/" aria-label="Homepage">
+            WL
+          </Link>
+        </div>
+        <ul className="flex gap-6 text-base font-medium">
           <li>
-            <Link href="/">Home</Link>
+            <Link href="/" className="hover:text-gray-700 transition-colors">Home</Link>
           </li>
           <li>
-            <Link href="/about">About</Link>
+            <Link href="/about" className="hover:text-gray-700 transition-colors">About</Link>
           </li>
           <li>
-            <Link href="/works">Works</Link>
+            <Link href="/works" className="hover:text-gray-700 transition-colors">Works</Link>
           </li>
         </ul>
-        <div className="border-2 px-7 rounded-full bg-black text-cyan-50">
-          <button>
-            <Link href="/contact">Contact</Link>
-          </button>
-        </div>
-      </div>
+        <Link href="/contact" className="button-56">
+          Contact
+        </Link>
+      </nav>
     </header>
   );
 };

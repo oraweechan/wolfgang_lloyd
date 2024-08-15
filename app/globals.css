@@ -17,7 +17,6 @@
     font-size: clamp(2.5rem, 5vw + 1rem, 9rem);
 
     text-transform: uppercase;
-
   }
   .hero-subtitle {
     text-transform: uppercase;
@@ -32,11 +31,109 @@
     font-size: max(8.68vw, 34px);
   }
 
-  .box {
-    --mask:
-      radial-gradient(223.61px at 50% 300px,#000 99%,#0000 101%) calc(50% - 200px) 0/400px 100%,
-      radial-gradient(223.61px at 50% -200px,#0000 99%,#000 101%) 50% 100px/400px 100% repeat-x;
-    -webkit-mask: var(--mask);
-            mask: var(--mask);
+  .text__effect {
+    position: relative;
   }
+  .text__overlay {
+    display: block;
+    position: absolute;
+    height: 101%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: #ede8e4;
+    opacity: 0.7;
+    transform-origin: center right;
+  }
+
+
+
+  .marker {
+    padding: 30px 0 8px;
+    position: relative;
+    display: inline-block; /* Ensure the marker only takes up as much space as the text */
+    z-index: 1;
+  }
+  
+  .marker::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 16px;
+    width: 100%; /* This makes sure it matches the content width */
+    height: 14px;
+    transform: skew(-12deg) translateX(-50%);
+    background: rgb(255, 13, 128);
+    z-index: -1;
+  }
+
+
+
+/* CSS */
+.button-56 {
+  align-items: center;
+  background-color: #17b1b5;
+  border: 2px solid #111;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #111;
+  cursor: pointer;
+  display: flex;
+  font-family: Inter,sans-serif;
+  font-size: 16px;
+  height: 24px;
+  justify-content: center;
+  line-height: 24px;
+  max-width: 100%;
+  padding: 0 1rem;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-56:after {
+  background-color: #111;
+  border-radius: 8px;
+  content: "";
+  display: block;
+  height: 24px;
+  left: 0;
+  width: 100%;
+  position: absolute;
+  top: -6px;
+  transform: translate(8px, 8px);
+  transition: transform .2s ease-out;
+  z-index: -1;
+}
+
+.button-56:hover:after {
+  transform: translate(0, 0);
+}
+
+.button-56:active {
+  background-color: #16a1a5;
+  outline: 0;
+}
+
+.button-56:hover {
+  outline: 0;
+}
+
+@media (min-width: 768px) {
+  .button-56 {
+    padding: 0 40px;
+    height: 32px;
+  }
+
+  .button-56:after {
+    top: -4px;
+    height: 32px;
+
+  }
+  
+}
+  
 }

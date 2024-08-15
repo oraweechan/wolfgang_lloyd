@@ -16,7 +16,6 @@ const Works = () => {
           scrub: true,
           start: "center-=10% center",
           end: "+=90%",
-          markers:true
         },
       });
 

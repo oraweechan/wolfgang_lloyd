@@ -19,7 +19,7 @@ export default function RootLayout({
       <body className={archivo_narrow.className}>
         <NavBar />
         {children}
-        <Footer/>
+        <Footer />
       </body>
     </html>
   );

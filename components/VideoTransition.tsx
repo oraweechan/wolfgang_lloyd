@@ -46,7 +46,6 @@ const VideoTransition = () => {
           className="w-full md:h-full md:object-cover "
           controls
           preload="auto"
-          poster="https://assets.codepen.io/16327/after.jpg"
           data-setup="{}"
           ref={videoRef}
           muted
