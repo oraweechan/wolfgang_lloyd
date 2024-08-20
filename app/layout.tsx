@@ -16,10 +16,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={archivo_narrow.className}>
+      <body className={`${archivo_narrow.className} bg-beige`}>
         <NavBar />
         {children}
-        <Footer />
       </body>
     </html>
   );

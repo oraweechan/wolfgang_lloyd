@@ -1,5 +1,6 @@
 "use client";
 
+import Footer from "@/components/Footer";
 import React, { useCallback } from "react";
 
 const Works = () => {
@@ -20,6 +21,7 @@ const Works = () => {
   );
 
   return (
+    <>
     <main className="p-10 min-h-screen">
       <div className="text-2xl font-bold mb-5">Works Page</div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
@@ -46,6 +48,8 @@ const Works = () => {
         ))}
       </div>
     </main>
+    <Footer/>
+    </>
   );
 };
 

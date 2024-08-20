@@ -1,8 +1,10 @@
 import Image from "next/image";
 import { self } from "../../utils";
+import Footer from "@/components/Footer";
 
 export default function About() {
   return (
+    <>
     <main className="bg-beige flex flex-col items-center py-10">
       <div className="flex flex-col md:flex-row mx-auto max-w-7xl p-6 space-y-6 md:space-y-0 md:space-x-6 bg-white rounded-md ">
         {/* Image Section */}
@@ -59,5 +61,7 @@ export default function About() {
         </div>
       </div>
     </main>
+    <Footer/>
+    </>
   );
 }
