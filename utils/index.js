@@ -27,3 +27,8 @@ export const portrait1 = {
     src: '/assets/images/film-photo-3.jpg',
     alt: 'Close-up of adjusting faders on a mixing console',
   };
+
+  export const self = {
+    src: '/assets/images/lloyd.jpg',
+    alt: 'Wolfgang Lloyd',
+  };

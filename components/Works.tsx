@@ -25,6 +25,7 @@ const Works = () => {
         if (i === 0) {
           tl.to(section, {
             duration: 1,
+
           });
         } else {
           tl.to(
@@ -33,6 +34,7 @@ const Works = () => {
               yPercent: -100,
               duration: 1,
               ease: "none",
+      
             },
             "+=1"
           );

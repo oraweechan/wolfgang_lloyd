@@ -41,7 +41,7 @@ export const FilmPhotos = () => {
           src={film1.src}
           alt={film1.alt}
           fill
-          className="object-cover rounded"
+          className="object-cover rounded-md shadow-lg"
         />
       </div>
     </div>
@@ -51,7 +51,7 @@ export const FilmPhotos = () => {
           src={film2.src}
           alt={film2.alt}
           fill
-          className="object-cover rounded"
+          className="object-cover rounded-md shadow-lg"
         />
       </div>
     </div>
@@ -61,7 +61,7 @@ export const FilmPhotos = () => {
           src={film3.src}
           alt={film3.alt}
           fill
-          className="object-cover rounded"
+          className="object-cover rounded-md shadow-lg"
         />
       </div>
     </div>

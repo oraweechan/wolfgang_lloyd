@@ -4,7 +4,7 @@ const NavBar = () => {
   return (
     <header className="sticky top-0 left-0 w-full bg-white z-50 border-b-4 border-black">
       <nav className="container mx-auto flex justify-between items-center px-6 py-5 ">
-        <div className="text-lg font-bold">
+        <div className="text-3xl font-bold">
           <Link href="/" aria-label="Homepage">
             WL
           </Link>
