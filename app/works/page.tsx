@@ -1,24 +1,30 @@
 "use client";
 
-import React, { useCallback } from 'react';
+import React, { useCallback } from "react";
 
 const Works = () => {
-  const handleMouseEnter = useCallback((event) => {
-    const videoElement = event.currentTarget;
-    videoElement.play();
-  }, []);
+  const handleMouseEnter = useCallback(
+    (event: React.MouseEvent<HTMLVideoElement>) => {
+      const videoElement = event.currentTarget;
+      videoElement.play();
+    },
+    []
+  );
 
-  const handleMouseLeave = useCallback((event) => {
-    const videoElement = event.currentTarget;
-    videoElement.pause();
-  }, []);
+  const handleMouseLeave = useCallback(
+    (event: React.MouseEvent<HTMLVideoElement>) => {
+      const videoElement = event.currentTarget;
+      videoElement.pause();
+    },
+    []
+  );
 
   return (
     <main className="p-10 min-h-screen">
       <div className="text-2xl font-bold mb-5">Works Page</div>
-      <div className="grid grid-cols-1 md:grid-cols-2  gap-5">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
         {[1, 2, 3, 4, 5, 6].map((index) => (
-          <div key={index} className="p-5 rounded-lg ">
+          <div key={index} className="p-5 rounded-lg">
             <video
               onMouseEnter={handleMouseEnter}
               onMouseLeave={handleMouseLeave}
