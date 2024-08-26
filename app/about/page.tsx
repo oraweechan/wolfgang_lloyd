@@ -5,15 +5,21 @@ import Footer from "@/components/Footer";
 export default function About() {
   return (
     <>
-    <main className="bg-beige flex flex-col items-center py-10">
-      <div className="flex flex-col md:flex-row mx-auto max-w-7xl p-6 space-y-6 md:space-y-0 md:space-x-6 bg-white rounded-md ">
+    <main className="bg-beige flex flex-col items-center pb-10 mt-20">
+      <div className="flex justify-start">
+
+          <h2 className="text-4xl md:text-7xl marker w-fit">
+            Wolfgang Lloyd
+          </h2>
+      </div>
+      <div className="flex flex-col md:flex-row mx-auto max-w-screen-lg px-8 py-12 space-y-6 md:space-y-0 md:space-x-6 bg-white rounded-md ">
         {/* Image Section */}
         <div className="flex justify-center md:justify-start md:flex-1 ">
-          <div className="relative w-full h-[60vh] md:h-[80vh]">
+          <div className="relative w-full h-[60vh] md:h-[80vh] ">
             <Image
               src={self.src}
               alt={self.alt}
-              className="rounded-md grayscale object-contain md:object-cover"
+              className="rounded-md grayscale object-contain md:object-cover shadow-2xl"
               layout="fill"
               sizes="(max-width: 768px) 100vw, 50vw"
               priority
@@ -22,10 +28,10 @@ export default function About() {
         </div>
 
         {/* Text Section */}
-        <div className="flex flex-col justify-center md:flex-1">
-          <h2 className="text-4xl md:text-8xl marker w-fit">
+        <div className="md:flex-1">
+          {/* <h2 className="text-4xl md:text-7xl marker w-fit">
             Wolfgang Lloyd
-          </h2>
+          </h2> */}
           <div className="text-lg leading-relaxed space-y-4">
             <p>
               Wolfgang Lloyd Media was founded to meet the evolving needs of

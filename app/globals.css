@@ -24,7 +24,7 @@
   }
 
   .nav-height {
-    @apply h-[calc(100vh-60px)];
+    @apply h-[calc(100vh-200px)];
   }
 
   .custom-font-size {
@@ -63,7 +63,7 @@
     width: 100%; /* This makes sure it matches the content width */
     height: 14px;
     transform: skew(-12deg) translateX(-50%);
-    background: rgb(255, 13, 128);
+    background: #ECA6E6;
     z-index: -1;
   }
 
@@ -72,14 +72,14 @@
 /* CSS */
 .button-56 {
   align-items: center;
-  background-color: #17b1b5;
+  background-color: #A7EBFE;
   border: 2px solid #111;
   border-radius: 8px;
   box-sizing: border-box;
   color: #111;
   cursor: pointer;
   display: flex;
-  font-family: Inter,sans-serif;
+  font-family: Inter, sans-serif;
   font-size: 16px;
   height: 24px;
   justify-content: center;
@@ -92,34 +92,22 @@
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
+  box-shadow: 2px 2px 0px 0px #111;
+  transition: box-shadow 0.2s ease-out; /* Add transition for smooth animation */
 }
 
-.button-56:after {
-  background-color: #111;
-  border-radius: 8px;
-  content: "";
-  display: block;
-  height: 24px;
-  left: 0;
-  width: 100%;
-  position: absolute;
-  top: -6px;
-  transform: translate(8px, 8px);
-  transition: transform .2s ease-out;
-  z-index: -1;
-}
 
-.button-56:hover:after {
-  transform: translate(0, 0);
+.button-56:hover {
+  outline: 0;
+  box-shadow: 4px 4px 0px 0px #111; /* Reduce shadow on active state */
+
 }
 
 .button-56:active {
   background-color: #16a1a5;
   outline: 0;
-}
+  box-shadow: 0px 0px 0px 0px #111; /* Remove shadow on hover */
 
-.button-56:hover {
-  outline: 0;
 }
 
 @media (min-width: 768px) {
@@ -127,13 +115,7 @@
     padding: 0 40px;
     height: 32px;
   }
-
-  .button-56:after {
-    top: -4px;
-    height: 32px;
-
-  }
-  
 }
+
   
 }

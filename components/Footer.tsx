@@ -6,10 +6,10 @@ const Footer = () => {
       <Link href="/contact">
       <div className="flex justify-between items-center w-full">
 
-      <h2 className="text-4xl md:text-9xl">
+      <h2 className="text-4xl md:text-9xl font-black	">
         Start a project
       </h2>
-      <span className="text-4xl md:text-9xl">
+      <span className="text-4xl md:text-9xl font-black	">
         →
       </span>
       </div>

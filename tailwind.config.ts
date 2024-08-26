@@ -10,8 +10,8 @@ const config: Config = {
     extend: {
       colors: {
         primary: "#2b2e4a", // Dark Blue
-        accentTeal: "#17B1B5", // Teal
-        accentPink: "rgb(255, 13, 128)", // Pink
+        accentTeal: "#A7EBFE", // Teal
+        accentPink: "#ECA6E6", // Pink
         secondary: "#903749", // Dark Red
         darkPurple: "#53354a", // Dark Purple
         lightGray: "#d1d5db", // Light Gray for secondary text on dark background

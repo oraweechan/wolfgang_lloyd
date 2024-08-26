@@ -55,7 +55,7 @@ const PhotoCollage = () => {
         </div>
 
         <div className="hidden md:flex-center container-padding p-6 md:pt-24 flex-col">
-          <h2 className="md:text-9xl">Reel</h2>
+          <h2 className="md:text-9xl font-black	">Reel</h2>
           <h3 className="text-2xl md:text-4xl">(↓)</h3>
         </div>
       </div>
