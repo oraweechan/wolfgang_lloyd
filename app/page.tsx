@@ -13,8 +13,12 @@ export default function Home() {
     <>
     <main className="bg-beige ">
       <Hero />
-      <MissionAndWorks />
+      <FilmPhotos/>
+      <Section />
+      {/* <IntroSection/> */}
+      <Works/>
       <Services />
+      {/* <MissionAndWorks /> */}
     </main>
     <Footer />
   </>

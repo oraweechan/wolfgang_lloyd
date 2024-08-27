@@ -12,7 +12,7 @@ export const FilmPhotos = () => {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: "#film-photo-container",
-        start: "top center",
+        start: "top bottom",
         end: "center center",
         scrub: 3,
       },
@@ -36,6 +36,8 @@ export const FilmPhotos = () => {
   }, []);
   return (
     <section id="film-photo-container" className="flex flex-wrap justify-center">
+      <div className="w-5/6 flex flex-col md:flex-row">
+
     <div className="film-photo w-full sm:w-1/2 md:w-1/3 p-2">
       <div className="relative w-full h-0 pb-[100%]"> 
         <Image
@@ -66,6 +68,7 @@ export const FilmPhotos = () => {
         />
       </div>
     </div>
+      </div>
   </section>
   );
 };

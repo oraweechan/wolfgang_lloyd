@@ -5,7 +5,7 @@ import Footer from "@/components/Footer";
 export default function About() {
   return (
     <>
-    <main className="bg-beige flex flex-col items-center pb-10 mt-20">
+    <main className="bg-beige flex flex-col items-center pb-10">
       <div className="flex justify-start">
 
           <h2 className="text-4xl md:text-7xl marker w-fit">

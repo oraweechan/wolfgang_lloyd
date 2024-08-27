@@ -39,18 +39,22 @@ const Services = () => {
     },
   ];
   return (
-    <section className="flex items-start justify-center py-10 md:py-20  md:pb-16 flex-col w-full md:flex-row ">
-      <div className="service-header flex-1 container-padding ">
-        <h2 className="text-4xl md:text-9xl marker font-black	">Services</h2>
-      </div>
-      <div className="services-container flex flex-col gap-10 flex-auto divide-y-2 divide-black pl-10">
-        {serviceData.map((service, index) => (
-          <ServiceItem
-            key={index}
-            title={service.title}
-            listItemArr={service.listItemArr}
-          />
-        ))}
+    <section className="flex py-10 md:pt-20 md:pb-28 flex-col w-full items-center ">
+      <div className="flex flex-col p-4 md:min-w-[1024px] md:flex-row">
+        <div className="flex-1 ">
+          <h2 className="text-4xl/relaxed md:text-8xl marker font-black	inline-block">
+            Services
+          </h2>
+        </div>
+        <div className="flex flex-col gap-10 flex-auto divide-y-2 divide-black md:pl-16">
+          {serviceData.map((service, index) => (
+            <ServiceItem
+              key={index}
+              title={service.title}
+              listItemArr={service.listItemArr}
+            />
+          ))}
+        </div>
       </div>
     </section>
   );

@@ -22,7 +22,7 @@ const Works = () => {
 
   return (
     <>
-      <main className="p-10 min-h-screen flex-center mt-20">
+      <main className="p-10 min-h-screen flex-center">
         <div className="max-w-screen-lg">
           <div className="text-2xl font-bold mb-5">Works Page</div>
           <div className="grid grid-cols-1 md:grid-cols-2">
