@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import Link from "next/link";
 import { useState } from "react";
 import { FiMenu, FiX } from "react-icons/fi"; // Icons for hamburger and close
@@ -31,10 +31,18 @@ const NavBar = () => {
         </div>
 
         {/* Full Navigation for Larger Screens */}
-        <ul className={`hidden md:flex gap-6 text-base font-medium`}>
-          <li>
+        <ul className={`hidden md:flex gap-6 text-lg font-medium`}>
+          {/* <li>
             <Link href="/" className="hover:text-gray-700 transition-colors">
               Home
+            </Link>
+            </li> */}
+          <li>
+            <Link
+              href="/works"
+              className="hover:text-gray-700 transition-colors"
+            >
+              Works
             </Link>
           </li>
           <li>
@@ -47,25 +55,29 @@ const NavBar = () => {
           </li>
           <li>
             <Link
-              href="/works"
+              href="/contact"
               className="hover:text-gray-700 transition-colors"
             >
-              Works
+              Contact
             </Link>
           </li>
         </ul>
 
-        <Link href="/contact" className="hidden md:block">
-          <button className="button-56">Contact</button>
-        </Link>
+        {/* <Link href="/contact" className="hidden md:block font-bold">
+         Contact
+        </Link> */}
 
         {/* Dropdown Menu for Smaller Screens */}
         {isOpen && (
           <div className="md:hidden absolute top-full right-4 rounded-md  bg-white/90 shadow-lg">
             <ul className="flex flex-col items-end px-16 md:items-center gap-6 py-4">
               <li>
-                <Link href="/" className="hover:text-gray-700 transition-colors" onClick={toggleMenu}>
-                  Home
+                <Link
+                  href="/works"
+                  className="hover:text-gray-700 transition-colors"
+                  onClick={toggleMenu}
+                >
+                  Works
                 </Link>
               </li>
               <li>
@@ -77,17 +89,13 @@ const NavBar = () => {
                   About
                 </Link>
               </li>
+
               <li>
                 <Link
-                  href="/works"
+                  href="/contact"
                   className="hover:text-gray-700 transition-colors"
                   onClick={toggleMenu}
                 >
-                  Works
-                </Link>
-              </li>
-              <li>
-                <Link href="/contact" className="hover:text-gray-700 transition-colors" onClick={toggleMenu}>
                   Contact
                 </Link>
               </li>

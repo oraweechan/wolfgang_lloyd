@@ -22,12 +22,73 @@ const Works = () => {
 
   return (
     <>
-      <main className="p-10 min-h-screen flex-center">
-        <div className="max-w-screen-lg">
-          <div className="text-2xl font-bold mb-5">Works Page</div>
-          <div className="grid grid-cols-1 md:grid-cols-2">
+      <main className="px-10 min-h-screen flex-center flex-col">
+        <div className="max-w-screen-lg md:px-6 my-4 rounded-md">
+          <div className="pt-5 pb-4 flex-center">
+            <h2 className="text-4xl md:text-7xl marker w-fit uppercase">
+              Works
+            </h2>
+          </div>
+          <div>
+            <video
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
+              controls
+              muted
+              playsInline
+              aria-hidden="true"
+              className="w-full rounded"
+            >
+              <source
+                src="https://video.wixstatic.com/video/282d6b_7816be45bd094435a114916ea55d9c09/1080p/mp4/file.mp4"
+                type="video/mp4"
+              />
+            </video>
+            <div className="mt-3 text-center">
+              <h3 className="text-lg font-semibold">Video </h3>
+            </div>
+          </div>
+          <div>
+            <video
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
+              controls
+              muted
+              playsInline
+              aria-hidden="true"
+              className="w-full rounded"
+            >
+              <source
+                src="https://video.wixstatic.com/video/282d6b_7816be45bd094435a114916ea55d9c09/1080p/mp4/file.mp4"
+                type="video/mp4"
+              />
+            </video>
+            <div className="mt-3 text-center">
+              <h3 className="text-lg font-semibold">Video </h3>
+            </div>
+          </div>
+          <div>
+            <video
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
+              controls
+              muted
+              playsInline
+              aria-hidden="true"
+              className="w-full rounded"
+            >
+              <source
+                src="https://video.wixstatic.com/video/282d6b_7816be45bd094435a114916ea55d9c09/1080p/mp4/file.mp4"
+                type="video/mp4"
+              />
+            </video>
+            <div className="mt-3 text-center">
+              <h3 className="text-lg font-semibold">Video </h3>
+            </div>
+          </div>
+          {/* <div className="grid grid-cols-1 md:grid-cols-2">
             {[1, 2, 3, 4, 5, 6].map((index) => (
-              <div key={index} className="p-5 rounded-lg">
+              <div key={index} className="md:p-5 rounded-lg">
                 <video
                   onMouseEnter={handleMouseEnter}
                   onMouseLeave={handleMouseLeave}
@@ -47,7 +108,7 @@ const Works = () => {
                 </div>
               </div>
             ))}
-          </div>
+          </div> */}
         </div>
       </main>
       <Footer />

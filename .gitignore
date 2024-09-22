@@ -19,6 +19,8 @@
 # misc
 .DS_Store
 *.pem
+public/assets/reel.mp4
+
 
 # debug
 npm-debug.log*

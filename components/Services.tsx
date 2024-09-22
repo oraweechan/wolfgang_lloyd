@@ -40,7 +40,7 @@ const Services = () => {
   ];
   return (
     <section className="flex py-10 md:pt-20 md:pb-28 flex-col w-full items-center ">
-      <div className="flex flex-col p-4 md:min-w-[1024px] md:flex-row">
+      <div className="flex flex-col py-5 px-8 md:min-w-[1024px] md:flex-row">
         <div className="flex-1 ">
           <h2 className="text-4xl/relaxed md:text-8xl marker font-black	inline-block">
             Services

@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import "@mantine/core/styles.css";
+import { ColorSchemeScript, MantineProvider } from "@mantine/core";
 import "./globals.css";
 import { archivo_narrow } from "./fonts";
 import NavBar from "@/components/NavBar";
@@ -16,9 +18,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <ColorSchemeScript />
+      </head>
       <body className={`${archivo_narrow.className} bg-beige`}>
         <NavBar />
-        {children}
+        <MantineProvider>{children}</MantineProvider>
       </body>
     </html>
   );

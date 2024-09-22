@@ -11,6 +11,8 @@ const config: Config = {
       colors: {
         primary: "#2b2e4a", // Dark Blue
         accentTeal: "#A7EBFE", // Teal
+        accentBlue: "#16a1a5", // Teal
+
         accentPink: "#ECA6E6", // Pink
         secondary: "#903749", // Dark Red
         darkPurple: "#53354a", // Dark Purple

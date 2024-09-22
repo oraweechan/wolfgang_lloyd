@@ -1,5 +1,4 @@
 import React from "react";
-import { film1 } from "../utils"; // Adjust the import path as needed
 import BackgroundVideo from "./ui/BackgroundVideo";
 
 const Hero = () => {
