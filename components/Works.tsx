@@ -47,7 +47,7 @@ const Works = () => {
   return (
     <div className="works md:relative ">
       <section className="section md:h-screen w-full flex justify-center" id="photo-collage">
-      <div className="md:w-5/6">
+      <div className="w-5/6">
 
         <PhotoCollage />
       </div>

@@ -5,9 +5,18 @@ import Footer from "@/components/Footer";
 export default function About() {
   return (
     <>
-      <main className="min-h-[80vh] flex-center p-6">
-        <div className="max-w-screen-lg ">
+      <main className="min-h-[80vh] flex-center">
+        <div className="max-w-screen-lg mb-4">
+        <div className="flex-center py-5 md:hidden">
+                  <h2 className="text-5xl md:text-7xl  uppercase">
+                    About 
+                  </h2>
+                  <span className="text-5xl md:text-7xl marker w-fit uppercase mt-2 ml-4">
+                    Lloyd
+                  </span>
+                </div>
           <div className="flex flex-col md:flex-row mx-auto max-w-screen-lg px-8 md:py-12 space-y-6 md:space-y-0 md:space-x-6  rounded-md md:gap-16 gap-4">
+       
             {/* Image Section */}
             <div className="flex justify-center md:justify-start md:flex-1 ">
               <div className="relative w-full h-[60vh] md:h-[80vh] ">
@@ -28,7 +37,7 @@ export default function About() {
             Wolfgang Lloyd
           </h2> */}
               <div className="text-lg leading-relaxed space-y-4">
-                <div className="flex-center">
+                <div className="md:flex-center hidden">
                   <h2 className="text-5xl md:text-7xl  uppercase">
                     About 
                   </h2>

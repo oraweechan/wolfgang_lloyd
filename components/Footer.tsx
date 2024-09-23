@@ -11,7 +11,7 @@ const Footer = () => {
             
         <Link href="/contact">
             <div className="flex">
-              <h2 className="text-5xl md:text-9xl font-black uppercase">Get in touch</h2>
+              <h2 className="text-4xl md:text-9xl font-black uppercase">Get in touch</h2>
               <span className="text-3xl md:text-7xl font-black ml-2 md:ml-8 self-center">→</span>
             </div>
         </Link>

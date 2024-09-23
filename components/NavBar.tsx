@@ -1,20 +1,45 @@
 "use client";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { FiMenu, FiX } from "react-icons/fi"; // Icons for hamburger and close
 
-const NavBar = () => {
+const NavBar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const menuRef = useRef<HTMLDivElement>(null); // Create a ref with type HTMLDivElement
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
+  const closeMenu = () => {
+    setIsOpen(false);
+  };
+
+  // Close the dropdown if a click is detected outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
+        closeMenu();
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+
+    // Cleanup the event listener on component unmount
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
   return (
     <header className="sticky top-0 left-0 w-full z-50 px-4 pt-4">
-      <nav className=" mx-auto flex justify-between items-center px-8 py-5 max-w-screen-lg gap-4 md:gap-24 bg-white/80 border-2 border-black rounded-md">
+      <nav className="mx-auto flex justify-between items-center px-8 py-5 max-w-screen-lg gap-4 md:gap-24 bg-white/80 border-2 border-black rounded-md">
         <div className="text-3xl font-bold">
-          <Link href="/" aria-label="Homepage">
+          <Link
+            href="/"
+            aria-label="Homepage"
+            className="hover:text-accentBlue transition-colors"
+          >
             WL
           </Link>
         </div>
@@ -32,15 +57,10 @@ const NavBar = () => {
 
         {/* Full Navigation for Larger Screens */}
         <ul className={`hidden md:flex gap-6 text-lg font-medium`}>
-          {/* <li>
-            <Link href="/" className="hover:text-gray-700 transition-colors">
-              Home
-            </Link>
-            </li> */}
           <li>
             <Link
               href="/works"
-              className="hover:text-gray-700 transition-colors"
+              className="hover:text-accentBlue transition-colors"
             >
               Works
             </Link>
@@ -48,7 +68,7 @@ const NavBar = () => {
           <li>
             <Link
               href="/about"
-              className="hover:text-gray-700 transition-colors"
+              className="hover:text-accentBlue transition-colors"
             >
               About
             </Link>
@@ -56,25 +76,24 @@ const NavBar = () => {
           <li>
             <Link
               href="/contact"
-              className="hover:text-gray-700 transition-colors"
+              className="hover:text-accentBlue transition-colors"
             >
               Contact
             </Link>
           </li>
         </ul>
 
-        {/* <Link href="/contact" className="hidden md:block font-bold">
-         Contact
-        </Link> */}
-
         {/* Dropdown Menu for Smaller Screens */}
         {isOpen && (
-          <div className="md:hidden absolute top-full right-4 rounded-md  bg-white/90 shadow-lg">
-            <ul className="flex flex-col items-end px-16 md:items-center gap-6 py-4">
+          <div
+            ref={menuRef} // Attach the ref to the dropdown container
+            className="md:hidden absolute top-full right-4 rounded-md bg-white/90 shadow-lg"
+          >
+            <ul className="flex flex-col px-16 md:items-center text-center gap-6 py-4">
               <li>
                 <Link
                   href="/works"
-                  className="hover:text-gray-700 transition-colors"
+                  className="hover:text-accentBlue transition-colors"
                   onClick={toggleMenu}
                 >
                   Works
@@ -83,17 +102,16 @@ const NavBar = () => {
               <li>
                 <Link
                   href="/about"
-                  className="hover:text-gray-700 transition-colors"
+                  className="hover:text-accentBlue transition-colors"
                   onClick={toggleMenu}
                 >
                   About
                 </Link>
               </li>
-
               <li>
                 <Link
                   href="/contact"
-                  className="hover:text-gray-700 transition-colors"
+                  className="hover:text-accentBlue transition-colors"
                   onClick={toggleMenu}
                 >
                   Contact

@@ -77,8 +77,8 @@ const PhotoCollage = () => {
         </div>
       </div>
       <div className="flex-center container-padding p-6 md:pt-24 flex-col md:hidden">
-        <h2 className="text-9xl">Reel</h2>
-        <h3 className="text-4xl">(↓)</h3>
+        <h2 className="text-6xl font-black">Reel</h2>
+        <h3 className="text-2xl">(↓)</h3>
       </div>
     </section>
   );

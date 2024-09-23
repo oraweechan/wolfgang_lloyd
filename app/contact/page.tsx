@@ -2,10 +2,13 @@
 
 import { TextInput, Textarea, Button, Group, Container } from "@mantine/core";
 import { useForm, UseFormReturnType } from "@mantine/form"; // Correct imports
-import { MdEmail } from "react-icons/md"; // Importing email icon from react-icons
+import { MdEmail } from "react-icons/md";
+import { FaFacebook, FaInstagram } from "react-icons/fa";
+
 import Image from "next/image";
 
 import { instagram, facebook } from "../../utils";
+import Link from "next/link";
 interface ContactFormValues {
   name: string;
   email: string;
@@ -59,10 +62,10 @@ export default function Contact() {
   };
 
   return (
-    <main className="p-16 flex flex-col items-center">
+    <main className="flex flex-col items-center px-8 pb-4">
       {/* Header Section */}
-      <header className="w-full max-w-4xl mb-8  text-center">
-        <h1 className="text-6xl md:text-7xl marker w-fit uppercase">Contact</h1>
+      <header className="w-full max-w-4xl py-5 text-center">
+        <h1 className="text-5xl md:text-7xl marker w-fit uppercase">Contact</h1>
         <p className="text-center text-lg text-gray-600 mb-4">
           I look forward to hearing from you! Let’s bring your vision to life
           together.
@@ -75,46 +78,28 @@ export default function Contact() {
           {/* Left Section - Additional content */}
           <div className="flex flex-col items-start">
             <h2 className="text-2xl font-semibold mb-4">Get in Touch</h2>
-            <div className="flex flex-col items-start gap-2">
-              <div className="flex justify-center items-center gap-2">
+            <div className="flex flex-col items-start gap-4">
+              <Link
+                href={`mailto:${MY_EMAIL}`}
+                className="hover:text-accentBlue transition-colors flex gap-2"
+              >
                 <MdEmail size={24} />
-                <a
-                  href={`mailto:${MY_EMAIL}`}
-                  className="text-blue-600 underline hover:text-blue-800 transition"
-                >
-                  {MY_EMAIL}
-                </a>
-              </div>
-              <div className="flex justify-center items-center gap-2">
-                <Image
-                  src={instagram.src}
-                  alt={instagram.alt}
-                  width={24} // Default width for small screens
-                  height={24} // Default height for small screens
-                  className="md:w-6 md:h-6"
-                />
-                <a
-                  href={`mailto:${MY_EMAIL}`}
-                  className="text-blue-600 underline hover:text-blue-800 transition"
-                >
-                  Instagram
-                </a>
-              </div>
-              <div className="flex justify-center items-center gap-2">
-                <Image
-                  src={facebook.src}
-                  alt={facebook.alt}
-                  width={24} // Default width for small screens
-                  height={24} // Default height for small screens
-                  className="md:w-6 md:h-6"
-                />
-                <a
-                  href={`mailto:${MY_EMAIL}`}
-                  className="text-blue-600 underline hover:text-blue-800 transition"
-                >
-                  Facebook
-                </a>
-              </div>
+                {MY_EMAIL}
+              </Link>
+              <Link
+                href={`mailto:${MY_EMAIL}`}
+                className="hover:text-accentBlue transition-colors flex gap-2"
+              >
+                <FaInstagram size={24} />
+                Instagram
+              </Link>
+              <Link
+                href={`mailto:${MY_EMAIL}`}
+                className="hover:text-accentBlue transition-colors flex gap-2"
+              >
+                <FaFacebook size={24} />
+                Facebook
+              </Link>
             </div>
           </div>
 
@@ -124,7 +109,6 @@ export default function Contact() {
               <div>
                 <TextInput
                   label="Name"
-                  placeholder="Your name"
                   {...form.getInputProps("name")}
                   classNames={{
                     input:
@@ -136,7 +120,6 @@ export default function Contact() {
               <div>
                 <TextInput
                   label="Email"
-                  placeholder="Your email"
                   {...form.getInputProps("email")}
                   classNames={{
                     input:
@@ -148,7 +131,6 @@ export default function Contact() {
               <div>
                 <Textarea
                   label="Message"
-                  placeholder="Your message"
                   {...form.getInputProps("message")}
                   autosize
                   minRows={4}
@@ -161,8 +143,10 @@ export default function Contact() {
 
               <div className="text-right">
                 <Button
+                color="#A7EBFE"
                   type="submit"
-                  className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-md shadow"
+                  autoContrast
+                  className=" hover:bg-blue-600 text-black px-4 py-2 rounded-md shadow"
                 >
                   Send Message
                 </Button>

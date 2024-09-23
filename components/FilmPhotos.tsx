@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import Image from "next/image";
 import { film1, film2, film3 } from "../utils";
 import { useGSAP } from "@gsap/react";
@@ -35,41 +35,47 @@ export const FilmPhotos = () => {
     );
   }, []);
   return (
-    <section id="film-photo-container" className="flex flex-wrap justify-center">
+    <section
+      id="film-photo-container"
+      className="flex flex-wrap justify-center mt-16  md:mt-32"
+    >
       <div className="w-5/6 flex flex-col md:flex-row">
-
-    <div className="film-photo w-full sm:w-1/2 md:w-1/3 p-2">
-      <div className="relative w-full h-0 pb-[100%]"> 
-        <Image
-          src={film1.src}
-          alt={film1.alt}
-          fill
-          className="object-cover rounded-md shadow-lg"
-        />
+        <div className="film-photo w-full sm:w-1/2 md:w-1/3 p-2">
+          <div className="relative w-full h-0 pb-[100%]">
+            <Image
+              src={film1.src}
+              alt={film1.alt}
+              fill
+              className="object-cover rounded-md shadow-lg"
+            />
+          </div>
+        </div>
+        <div className="film-photo w-full sm:w-1/2 md:w-1/3 p-2">
+          <div className="relative w-full h-0 pb-[100%]">
+            {" "}
+            {/* Aspect ratio 1:1 */}
+            <Image
+              src={film2.src}
+              alt={film2.alt}
+              fill
+              className="object-cover rounded-md shadow-lg"
+            />
+          </div>
+        </div>
+        <div className="film-photo w-full sm:w-1/2 md:w-1/3 p-2">
+          <div className="relative w-full h-0 pb-[100%]">
+            {" "}
+            {/* Aspect ratio 1:1 */}
+            <Image
+              src={film3.src}
+              alt={film3.alt}
+              fill
+              className="object-cover rounded-md shadow-lg"
+            />
+          </div>
+        </div>
       </div>
-    </div>
-    <div className="film-photo w-full sm:w-1/2 md:w-1/3 p-2">
-      <div className="relative w-full h-0 pb-[100%]"> {/* Aspect ratio 1:1 */}
-        <Image
-          src={film2.src}
-          alt={film2.alt}
-          fill
-          className="object-cover rounded-md shadow-lg"
-        />
-      </div>
-    </div>
-    <div className="film-photo w-full sm:w-1/2 md:w-1/3 p-2">
-      <div className="relative w-full h-0 pb-[100%]"> {/* Aspect ratio 1:1 */}
-        <Image
-          src={film3.src}
-          alt={film3.alt}
-          fill
-          className="object-cover rounded-md shadow-lg"
-        />
-      </div>
-    </div>
-      </div>
-  </section>
+    </section>
   );
 };
 
