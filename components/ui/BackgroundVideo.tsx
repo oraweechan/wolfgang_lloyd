@@ -9,10 +9,7 @@ const BackgroundVideo = () => {
         muted
         playsInline
       >
-        <source
-          src="https://www.dropbox.com/scl/fi/kh0rb1988kr66qms5kpcn/UPDATED-WEBSITE-REEL-09192024.mp4?rlkey=vc8kwenvfxo4fhk2chwn7umc4&e=1&st=lgh7f9p1&raw=1"
-          type="video/mp4"
-        ></source>
+        <source src="/assets/hero-reel.mp4" type="video/mp4"></source>
         <p className="vjs-no-js">
           To view this video please enable JavaScript, and consider upgrading to
           a web browser that
